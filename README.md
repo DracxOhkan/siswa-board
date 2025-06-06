@@ -6,7 +6,7 @@ Aplikasi dashboard nilai siswa berbasis Streamlit + AI saran belajar.
 - Pastikan OpenAI API key dimasukkan di bagian secrets
 
 ## Preview
-![Screenshot 2025-06-06 234246](https://github.com/user-attachments/assets/61416e19-c944-40c9-9e6a-fa08342b8e3c)
+![preview](![Preview](https://github.com/user-attachments/assets/75fc583e-bf19-4f85-ba7f-7d7dddf529fc)
 
 
 ## Fitur
