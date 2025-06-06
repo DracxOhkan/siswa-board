@@ -56,8 +56,7 @@ streamlit run siswa_board_app.py
 ---
 
 ## 🖼️ Preview Aplikasi
-
-![Preview Dashboard](![image](https://github.com/user-attachments/assets/4190e10e-4700-468d-bab0-5a554ddc0932)
+(![image](https://github.com/user-attachments/assets/4190e10e-4700-468d-bab0-5a554ddc0932)
 
 
 ---
