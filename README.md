@@ -1,4 +1,4 @@
-# 📚 Siswa Board
+# 📚 Siswa Board – Aplikasi Dasbor Penilaian dan Analisis Siswa Berbasis AI
 
 **Siswa Board** adalah aplikasi dashboard interaktif berbasis Streamlit yang memudahkan guru atau pengajar untuk mencatat, mengelola, dan menganalisis nilai siswa secara cepat dan modern. Aplikasi ini juga didukung oleh kecerdasan buatan dari OpenAI untuk memberikan saran belajar yang dipersonalisasi berdasarkan performa siswa.
 
