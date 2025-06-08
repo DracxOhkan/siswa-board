@@ -89,9 +89,10 @@ def edit_nilai_siswa():
         st.warning("Tidak ada data siswa.")
         return
     df = pd.DataFrame(daftar_siswa)
-    pilihan = st.selectbox("Pilih siswa untuk diedit:", df["nama"] + " - " + df["nomor_absen"])
+    df["identitas"] = df["nama"] + " - " + df["nomor_absen"].astype(str)
+    pilihan = st.selectbox("Pilih siswa untuk diedit:", df["identitas"])
     if pilihan:
-        baris = df[df["nama"] + " - " + df["nomor_absen"] == pilihan].iloc[0]
+        baris = df[df["identitas"] == pilihan].iloc[0]
         nilai_baru = st.number_input(f"Nilai baru untuk {baris['nama']}:", 0.0, 100.0, float(baris["nilai"]))
         if st.button("Simpan Perubahan"):
             for siswa in daftar_siswa:
@@ -200,9 +201,10 @@ def tampilkan_saran_ai():
         st.warning("Data kosong.")
         return
     df = pd.DataFrame(daftar_siswa)
-    pilihan = st.selectbox("Pilih siswa", df["nama"] + " - " + df["nomor_absen"])
+    df["identitas"] = df["nama"] + " - " + df["nomor_absen"].astype(str)
+    pilihan = st.selectbox("Pilih siswa", df["identitas"])
     if pilihan:
-        baris = df[df["nama"] + " - " + df["nomor_absen"] == pilihan].iloc[0]
+        baris = df[df["identitas"] == pilihan].iloc[0]
         st.write(f"Nama: {baris['nama']} | Nilai: {baris['nilai']} | Grade: {baris['grade']}")
         if baris['grade'] == 'A':
             st.success("🏅 Luar biasa! Kamu mendapatkan grade A.")
@@ -269,4 +271,3 @@ elif pilihan == "Hapus Semua Data":
     if st.sidebar.button("Hapus Sekarang"):
         simpan_data([])
         st.sidebar.success("✅ Semua data telah dihapus.")
-
